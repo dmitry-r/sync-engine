@@ -79,8 +79,7 @@ apt-get -y install git \
                    mysql-server \
                    mysql-client \
                    python \
-                   python-dev \
-                   python-pip \
+                   python-dev  \
                    python-setuptools \
                    build-essential \
                    libmysqlclient-dev \
@@ -174,6 +173,8 @@ fi
 color '35;1' 'Ensuring setuptools and pip versions...'
 # If python-setuptools is actually the old 'distribute' fork of setuptools,
 # then the first 'pip install setuptools' will be a no-op.
+curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
+python get-pip.py
 pip install 'pip==7.1.2' 'setuptools>=5.3'
 hash pip        # /usr/bin/pip might now be /usr/local/bin/pip
 pip install 'pip==7.1.2' 'setuptools>=5.3'
