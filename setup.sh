@@ -79,7 +79,7 @@ apt-get -y install git \
                    mysql-server \
                    mysql-client \
                    python \
-                   python-dev  \
+                   python-dev \
                    python-setuptools \
                    build-essential \
                    libmysqlclient-dev \
